@@ -14,7 +14,6 @@ function MissingRange(nums)
         if (nums[i] + 1 != nums[i + 1])
         {
             let  range = nums[i] + 1 == (nums[i + 1] - 1) ? (nums[i] + 1).toString() : (nums[i] + 1) + "->" + (nums[i + 1] - 1);
-            console.log(range);
             result.push(range);
         }
     }
