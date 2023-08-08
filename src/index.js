@@ -1,4 +1,4 @@
 //module.js:
 import { MissingRange } from './missingrange.js';
 
-console.log(MissingRange([0, 1, 3, 50, 75]));
+console.log(MissingRange([1, 2, 3, 4, 5, 10, 11, 12]));

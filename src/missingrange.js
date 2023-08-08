@@ -1,12 +1,12 @@
 function MissingRange(nums)
 {
-    if (!nums || nums.length === 0) return [];
-    if (nums.length === 1) return [nums[0].toString()];
+    if (!nums || nums.length === 0) return ["0->99"];
+    if (nums.length === 1 && nums[0] == 0 ) return ['1->99'];
     let result = [];
     let start = nums[0];
     let end = nums.at(-1);
     if (start !== 0) {
-        result.push(start > 1 ? `${start - 1}->${start - 1}` : start.toString());
+        result.push(start === 1 ? `0` : `0->${start - 1}`);
     }
 
     for (let i = 0; i < nums.length - 1; i++)
@@ -15,7 +15,7 @@ function MissingRange(nums)
         {
             let  range = nums[i] + 1 == (nums[i + 1] - 1) ? (nums[i] + 1).toString() : (nums[i] + 1) + "->" + (nums[i + 1] - 1);
             console.log(range);
-           result.push(range);
+            result.push(range);
         }
     }
     if (end != 99)
