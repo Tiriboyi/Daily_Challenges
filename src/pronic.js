@@ -5,17 +5,13 @@ function isHeteromecic(n) {
     if(n % 1 !== 0) return false;
     //check if n is positive
     if(n < 0) return false;
-    // do while loop
+    // use do while loop run at least once for n = 0 to be true
     let i = 0;
     do{
         if(i * (i + 1) === n) return true;
         i++;
     }
     while(i <= n);
-    // for(let i = 0;i < n; i++)
-    // {
-    //     if(i * (i + 1) === n) return true;
-    // }
     return false;
 }
 
